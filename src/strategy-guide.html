@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Blackjack Basic Strategy Guide - Complete Chart & Rules</title>
+    <meta name="description" content="Master blackjack basic strategy with our complete guide. Learn the perfect strategy chart, rules, and tips to reduce house edge to 0.5%. Free strategy training included.">
+    <meta name="keywords" content="blackjack basic strategy, blackjack strategy chart, perfect strategy, blackjack rules, house edge, casino strategy">
+    <meta name="author" content="Blackjack Strategy Master">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Blackjack Basic Strategy Guide - Complete Chart & Rules">
+    <meta property="og:description" content="Master blackjack basic strategy with our complete guide. Learn the perfect strategy chart and rules.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://yourdomain.com/strategy-guide.html">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://yourdomain.com/strategy-guide.html">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Blackjack Basic Strategy Guide - Complete Chart & Rules",
+        "description": "Master blackjack basic strategy with our complete guide. Learn the perfect strategy chart, rules, and tips to reduce house edge to 0.5%.",
+        "author": {
+            "@type": "Person",
+            "name": "Blackjack Strategy Master"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Blackjack Strategy Master"
+        },
+        "datePublished": "2025-01-28",
+        "dateModified": "2025-01-28"
+    }
+    </script>
+    
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+        /* Enhanced Content Styling */
+        .content-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 32px;
+            background: rgba(30, 41, 59, 0.95);
+            border-radius: 24px;
+            margin-top: 20px;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .page-header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 32px;
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.8), rgba(30, 41, 59, 0.6));
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .page-header h1 {
+            font-size: clamp(2.5rem, 6vw, 3.5rem);
+            background: linear-gradient(135deg, #fbbf24, #f59e0b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 16px;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+        }
+        
+        .page-header p {
+            font-size: 1.2rem;
+            color: #cbd5e1;
+            margin-bottom: 24px;
+            font-weight: 500;
+        }
+        
+        .page-nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 24px;
+        }
+        
+        .page-nav a {
+            color: #3b82f6;
+            text-decoration: none;
+            padding: 12px 20px;
+            border-radius: 12px;
+            background: rgba(59, 130, 246, 0.1);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            font-weight: 600;
+            font-size: 0.95rem;
+            border: 1px solid rgba(59, 130, 246, 0.2);
+        }
+        
+        .page-nav a:hover {
+            background: rgba(59, 130, 246, 0.2);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        
+        .content-section {
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.8), rgba(30, 41, 59, 0.6));
+            border-radius: 20px;
+            padding: 28px;
+            margin: 24px 0;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+        
+        .content-section h2 {
+            color: #fbbf24;
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        
+        .content-section h3 {
+            color: #3b82f6;
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin: 24px 0 16px 0;
+        }
+        
+        .content-section p {
+            color: #e2e8f0;
+            font-size: 1.1rem;
+            line-height: 1.7;
+            margin-bottom: 16px;
+        }
+        
+        .strategy-chart {
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.9), rgba(30, 41, 59, 0.7));
+            border-radius: 20px;
+            padding: 28px;
+            margin: 24px 0;
+            overflow-x: auto;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+        
+        .strategy-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: rgba(15, 23, 42, 0.8);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        
+        .strategy-table th,
+        .strategy-table td {
+            border: 1px solid #475569;
+            padding: 12px 8px;
+            text-align: center;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        
+        .strategy-table th {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.3), rgba(37, 99, 235, 0.2));
+            color: #fbbf24;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        
+        .hit { 
+            background: linear-gradient(135deg, rgba(239, 68, 68, 0.2), rgba(220, 38, 38, 0.1));
+            color: #ef4444;
+            font-weight: 700;
+        }
+        .stand { 
+            background: linear-gradient(135deg, rgba(34, 197, 94, 0.2), rgba(22, 163, 74, 0.1));
+            color: #22c55e;
+            font-weight: 700;
+        }
+        .double { 
+            background: linear-gradient(135deg, rgba(251, 191, 36, 0.2), rgba(245, 158, 11, 0.1));
+            color: #fbbf24;
+            font-weight: 700;
+        }
+        .split { 
+            background: linear-gradient(135deg, rgba(168, 85, 247, 0.2), rgba(147, 51, 234, 0.1));
+            color: #a855f7;
+            font-weight: 700;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 16px 32px;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: 700;
+            margin: 24px 0;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+        
+        .tip-box {
+            background: linear-gradient(135deg, rgba(251, 191, 36, 0.1), rgba(245, 158, 11, 0.05));
+            border: 2px solid #fbbf24;
+            border-radius: 16px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .tip-box h4 {
+            color: #fbbf24;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+        
+        .tip-box p {
+            color: #e2e8f0;
+            margin: 0;
+        }
+        
+        .highlight {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(37, 99, 235, 0.1));
+            border: 1px solid #3b82f6;
+            border-radius: 8px;
+            padding: 16px;
+            margin: 16px 0;
+        }
+        
+        .highlight strong {
+            color: #3b82f6;
+            font-weight: 700;
+        }
+        
+        @media (max-width: 768px) {
+            .content-container {
+                padding: 20px;
+                margin: 10px;
+            }
+            
+            .strategy-table {
+                font-size: 0.8rem;
+            }
+            
+            .strategy-table th,
+            .strategy-table td {
+                padding: 8px 4px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="content-container">
+        <header class="page-header">
+            <h1>📚 Blackjack Basic Strategy Guide</h1>
+            <p>Master the perfect strategy for every blackjack situation</p>
+            <nav class="page-nav">
+                <a href="index.html">🏠 Home</a>
+                <a href="card-counting.html">🎯 Card Counting</a>
+                <a href="about.html">ℹ️ About</a>
+                <a href="blog/">📝 Blog</a>
+            </nav>
+        </header>
+
+        <section class="content-section">
+            <h2>What is Basic Strategy?</h2>
+            <p>Basic strategy is a mathematically proven set of rules that tells you the optimal play for every possible blackjack hand. By following basic strategy perfectly, you can reduce the house edge to as low as 0.5% - making blackjack one of the best games in the casino.</p>
+            
+            <div class="tip-box">
+                <h4>💡 Key Takeaway</h4>
+                <p>Basic strategy is not about winning every hand - it's about making the mathematically correct decision that minimizes your losses over time.</p>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2>Basic Strategy Rules</h2>
+            
+            <h3>Hard Hands (No Ace or Ace = 1)</h3>
+            <div class="strategy-chart">
+                <table class="strategy-table">
+                    <thead>
+                        <tr>
+                            <th>Your Hand</th>
+                            <th>Dealer 2-6</th>
+                            <th>Dealer 7-9</th>
+                            <th>Dealer 10-A</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>8 or less</td><td class="hit">Hit</td><td class="hit">Hit</td><td class="hit">Hit</td></tr>
+                        <tr><td>9</td><td class="double">Double</td><td class="hit">Hit</td><td class="hit">Hit</td></tr>
+                        <tr><td>10</td><td class="double">Double</td><td class="double">Double</td><td class="hit">Hit</td></tr>
+                        <tr><td>11</td><td class="double">Double</td><td class="double">Double</td><td class="double">Double</td></tr>
+                        <tr><td>12</td><td class="stand">Stand</td><td class="hit">Hit</td><td class="hit">Hit</td></tr>
+                        <tr><td>13-16</td><td class="stand">Stand</td><td class="hit">Hit</td><td class="hit">Hit</td></tr>
+                        <tr><td>17+</td><td class="stand">Stand</td><td class="stand">Stand</td><td class="stand">Stand</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3>Soft Hands (Ace = 11)</h3>
+            <div class="strategy-chart">
+                <table class="strategy-table">
+                    <thead>
+                        <tr>
+                            <th>Your Hand</th>
+                            <th>Dealer 2-6</th>
+                            <th>Dealer 7-9</th>
+                            <th>Dealer 10-A</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>A,2-A,6</td><td class="hit">Hit</td><td class="hit">Hit</td><td class="hit">Hit</td></tr>
+                        <tr><td>A,7</td><td class="stand">Stand</td><td class="hit">Hit</td><td class="hit">Hit</td></tr>
+                        <tr><td>A,8</td><td class="stand">Stand</td><td class="stand">Stand</td><td class="stand">Stand</td></tr>
+                        <tr><td>A,9</td><td class="stand">Stand</td><td class="stand">Stand</td><td class="stand">Stand</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3>Pairs</h3>
+            <div class="strategy-chart">
+                <table class="strategy-table">
+                    <thead>
+                        <tr>
+                            <th>Your Pair</th>
+                            <th>Dealer 2-6</th>
+                            <th>Dealer 7-9</th>
+                            <th>Dealer 10-A</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>A,A</td><td class="split">Split</td><td class="split">Split</td><td class="split">Split</td></tr>
+                        <tr><td>10,10</td><td class="stand">Stand</td><td class="stand">Stand</td><td class="stand">Stand</td></tr>
+                        <tr><td>9,9</td><td class="split">Split</td><td class="split">Split</td><td class="stand">Stand</td></tr>
+                        <tr><td>8,8</td><td class="split">Split</td><td class="split">Split</td><td class="split">Split</td></tr>
+                        <tr><td>7,7</td><td class="split">Split</td><td class="split">Split</td><td class="hit">Hit</td></tr>
+                        <tr><td>6,6</td><td class="split">Split</td><td class="hit">Hit</td><td class="hit">Hit</td></tr>
+                        <tr><td>5,5</td><td class="double">Double</td><td class="double">Double</td><td class="hit">Hit</td></tr>
+                        <tr><td>4,4</td><td class="hit">Hit</td><td class="hit">Hit</td><td class="hit">Hit</td></tr>
+                        <tr><td>3,3</td><td class="split">Split</td><td class="split">Split</td><td class="hit">Hit</td></tr>
+                        <tr><td>2,2</td><td class="split">Split</td><td class="split">Split</td><td class="hit">Hit</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2>Key Strategy Tips</h2>
+            
+            <div class="highlight">
+                <h3>🎯 Always Stand on 17+</h3>
+                <p>Never hit a hard 17 or higher, regardless of what the dealer shows. The probability of busting is too high.</p>
+            </div>
+            
+            <div class="highlight">
+                <h3>💎 Always Split Aces and 8s</h3>
+                <p>Aces should always be split, and 8s should always be split because a 16 is a terrible hand.</p>
+            </div>
+            
+            <div class="highlight">
+                <h3>💰 Double Down on 11</h3>
+                <p>Always double down on 11 unless the dealer shows an Ace (then hit to avoid dealer blackjack).</p>
+            </div>
+            
+            <div class="highlight">
+                <h3>🚫 Never Split 10s</h3>
+                <p>A 20 is a great hand - don't split it into two potentially weaker hands.</p>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2>Practice Makes Perfect</h2>
+            <p>The key to mastering basic strategy is practice. Use our free blackjack simulator to practice these rules until they become second nature.</p>
+            
+            <div style="text-align: center;">
+                <a href="index.html" class="cta-button">🎮 Practice Basic Strategy Now</a>
+            </div>
+        </section>
+    </div>
+</body>
+</html> 

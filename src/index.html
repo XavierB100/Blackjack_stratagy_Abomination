@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <title>Blackjack Strategy Master - Free Online Simulator with Perfect Basic Strategy</title>
+    <meta name="description" content="Learn blackjack strategy with our free online simulator. Practice card counting and perfect basic strategy with 100% accurate feedback. Master blackjack with real-time statistics and professional training tools.">
+    <meta name="keywords" content="blackjack, card counting, basic strategy, online casino game, free blackjack simulator, blackjack training, hi-lo system, perfect strategy">
+    <meta name="author" content="Blackjack Strategy Master">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Blackjack Strategy Master - Free Online Simulator">
+    <meta property="og:description" content="Learn blackjack strategy with our free online simulator. Practice card counting and basic strategy with 100% accurate feedback.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourdomain.com">
+    <meta property="og:image" content="https://yourdomain.com/images/blackjack-preview.jpg">
+    <meta property="og:site_name" content="Blackjack Strategy Master">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Blackjack Strategy Master - Free Online Simulator">
+    <meta name="twitter:description" content="Learn blackjack strategy with our free online simulator. Practice card counting and perfect basic strategy.">
+    <meta name="twitter:image" content="https://yourdomain.com/images/blackjack-preview.jpg">
+
+    <!-- Additional SEO Meta Tags -->
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+    <meta name="distribution" content="global">
+    <meta name="rating" content="general">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://yourdomain.com">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Blackjack Strategy Master",
+        "description": "Free online blackjack simulator with perfect basic strategy and card counting",
+        "url": "https://yourdomain.com",
+        "applicationCategory": "Game",
+        "operatingSystem": "Web Browser",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "featureList": [
+            "Perfect Basic Strategy",
+            "Hi-Lo Card Counting",
+            "Real-time Statistics",
+            "Bankroll Management",
+            "Mobile Responsive"
+        ],
+        "author": {
+            "@type": "Person",
+            "name": "Blackjack Strategy Master"
+        }
+    }
+    </script>
+
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- Performance optimizations -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Preload critical resources -->
+    <link rel="preload" href="js/game.js" as="script">
+    <link rel="preload" href="js/main.js" as="script">
+
+    <!-- DNS prefetch for external resources -->
+    <link rel="dns-prefetch" href="//yourdomain.com">
+
+    <!-- Performance hints -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+</head>
+<body>
+    <div class="game-container">
+        <header class="header">
+            <h1>🃏 Blackjack Strategy Master</h1>
+            <p>Perfect Basic Strategy with Card Counting</p>
+            <nav>
+                <a href="home.html">🏠 Home</a>
+                <a href="strategy-guide.html">📚 Strategy Guide</a>
+                <a href="card-counting.html">🎯 Card Counting</a>
+                <a href="about.html">ℹ️ About</a>
+                <a href="blog/">📝 Blog</a>
+            </nav>
+            <button class="btn btn-secondary" onclick="toggleBankroll()">💰 Show Bankroll</button>
+        </header>
+
+        <div class="count-display">
+            <div class="count-info">
+                <div class="count-item">
+                    <h3>Running Count</h3>
+                    <div class="count-value" id="runningCount">0</div>
+                </div>
+                <div class="count-item">
+                    <h3>True Count</h3>
+                    <div class="count-value" id="trueCount">0.0</div>
+                </div>
+                <div class="count-item">
+                    <h3>Decks Left</h3>
+                    <div class="count-value" id="decksLeft">6.0</div>
+                </div>
+                <div class="count-item">
+                    <h3>Penetration</h3>
+                    <div class="count-value" id="penetration">0%</div>
+                </div>
+            </div>
+            <div class="betting-advice" id="bettingAdvice">
+                Bet table minimum - True count is not favorable
+            </div>
+        </div>
+
+        <div id="splitContainer" class="split-container" style="display: none;">
+            <!-- Split hands will be dynamically inserted here -->
+        </div>
+
+        <main class="game-area">
+            <section class="hand-section">
+                <h2 class="hand-title">Dealer's Hand</h2>
+                <div class="cards-display" id="dealerCards" aria-label="Dealer's cards"></div>
+                <div class="hand-value" id="dealerValue">Value: 0</div>
+            </section>
+
+            <section class="hand-section">
+                <h2 class="hand-title">Your Hand</h2>
+                <div class="cards-display" id="playerCards" aria-label="Your cards"></div>
+                <div class="hand-value" id="playerValue">Value: 0</div>
+            </section>
+        </main>
+
+        <section class="strategy-advice" id="strategyAdvice">
+            <h3>Strategy Recommendation</h3>
+            <div class="strategy-text">Click "New Game" to start</div>
+        </section>
+
+        <section class="controls">
+            <button class="btn btn-primary" onclick="newGame()" aria-label="Start a new game">New Game</button>
+            <button class="btn btn-success" id="hitBtn" onclick="hit()" disabled aria-label="Take another card">Hit</button>
+            <button class="btn btn-warning" id="standBtn" onclick="stand()" disabled aria-label="Keep current hand">Stand</button>
+            <button class="btn btn-danger" id="doubleBtn" onclick="double()" disabled aria-label="Double your bet and take one card">Double</button>
+            <button class="btn btn-primary" id="splitBtn" onclick="split()" disabled aria-label="Split your pair into two hands">Split</button>
+            <button class="btn btn-secondary" id="surrenderBtn" onclick="surrender()" disabled aria-label="Surrender and lose half your bet">Surrender</button>
+        </section>
+
+        <section class="bankroll-section" style="display: none;">
+            <h3>Bankroll Management</h3>
+            <div class="bankroll-info">
+                <div class="bankroll-item">
+                    <label for="bankrollDisplay">Bankroll: $</label>
+                    <span id="bankrollDisplay">10000</span>
+                </div>
+                <div class="bankroll-item">
+                    <label for="currentBet">Current Bet: $</label>
+                    <input type="number" id="currentBet" value="25" min="1" max="1000" aria-label="Current bet amount">
+                </div>
+                <div class="bankroll-item">
+                    <label for="optimalBet">Optimal Bet: $</label>
+                    <span id="optimalBet">25</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="message" id="gameMessage" style="display: none;" role="alert" aria-live="polite"></section>
+
+        <section class="game-stats">
+            <h3>Game Statistics</h3>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-label">Games Played</div>
+                    <div class="stat-value" id="gamesPlayed">0</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-label">Wins</div>
+                    <div class="stat-value" id="wins">0</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-label">Losses</div>
+                    <div class="stat-value" id="losses">0</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-label">Win Rate</div>
+                    <div class="stat-value" id="winRate">0%</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-label">Blackjacks</div>
+                    <div class="stat-value" id="blackjackWins">0</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-label">Doubles</div>
+                    <div class="stat-value" id="doubles">0</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-label">Splits</div>
+                    <div class="stat-value" id="splits">0</div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Load JavaScript modules in order with performance optimizations -->
+    <script src="js/game.js" defer></script>
+    <script src="js/strategy.js" defer></script>
+    <script src="js/ui.js" defer></script>
+    <script src="js/actions.js" defer></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/test.js" defer></script>
+</body>
+</html>
